@@ -18,14 +18,14 @@ class Model_index extends CI_Model {
         // generate the email based on user_username + @greenwich.ac.uk
         // insert into DB
         $emailPrefix = strtolower(substr($lname, 0, 1)) + strtolower(substr($fname, 0, 1)); // David Smith would result in sd
-        $data = {
+        $data = [
             'user_fname' = $user_fname,
             'user_oname' = $user_oname,
             'user_lname' = $user_lname,
             'user_username' = $user_username,
             'user_password' = $user_password,
             'user_email' = $user_email
-        }  
+        ]
         $this->db->insert('users', $data);
     }
 }
