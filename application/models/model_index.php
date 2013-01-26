@@ -20,7 +20,7 @@ class Model_index extends CI_Model {
             'user_password' = $user_password,
             'user_email' = $user_email
         }  
-        $this->db->insert($data);
+        $this->db->insert('users', $data);
     }
     
 }
