@@ -34,6 +34,7 @@ Contains all of the static files that will be included in the head of the docume
 __uploads__
 
 Not implemented yet but will be used to ftp files from client side to the server. References to these files will be stored in the database. The directory structure will work as follows:
+
 	/uploads/[user.id]/[coursework.id]/[filename]
 
 
