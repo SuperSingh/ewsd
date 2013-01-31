@@ -11,5 +11,4 @@ class Main extends CI_Controller
 		$this->load->view('layout/master', $data);
 	}
 }
-
 ?>
