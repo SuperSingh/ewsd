@@ -1,0 +1,16 @@
+Web Talk
+========
+
+Python, Ruby or PHP?
+SQL or NoSQL. ORM?
+Who's doing what?
+Harvey to test?
+Troy to design?
+
+Product Backlog
+===============
+Design DB - MUST BE DONE FIRST AND TESTED
+Design Layout
+Code Site
+Test
+Deploy

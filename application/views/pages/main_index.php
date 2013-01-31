@@ -1,4 +1,4 @@
-﻿<div class="row">
+﻿<div class="row-fluid">
 	<div class="span12">
         <div class="hero-unit">
             <h1>Heading</h1>
@@ -9,7 +9,7 @@
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row-fluid">
 	<div class="span3 _nav">
         <div class="well">
             <?php $this->load->view('layout/nav') ?>

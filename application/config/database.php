@@ -48,21 +48,20 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-// Windows
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'db_ewsd';
+// Windows via XAMPP
+// $db['default']['hostname'] = 'localhost';
+// $db['default']['username'] = 'root';
+// $db['default']['password'] = '';
+// $db['default']['database'] = 'db_ewsd';
+
 // Mac via MAMP-PRO
-/*
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = 'root';
 $db['default']['database'] = 'db_ewsd';
-*/
 
 // The rest of the config
-$db['default']['dbdriver'] = 'mysqli';
+$db['default']['dbdriver'] = 'mysqli'; // GREAT SUCCESS
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;
