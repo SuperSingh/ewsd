@@ -22,14 +22,14 @@ __Design/UI/UX__
 * Code Igniter 2.1.3
 * MySQLi (Can be migrated to oracle/postgre/etc due to use of active records and query building)
 
-### Non CI directories:
+#### Non CI directories:
 __supportfiles__
 
-	Contains relevant content that isn't indluded in the app.
+Contains relevant content that isn't indluded in the app.
 	
 __static__
 
-	Contains all of the static files that will be included in the head of the document, see the /application/views/layout/header.php for more details
+Contains all of the static files that will be included in the head of the document, see the /application/views/layout/header.php for more details
 
 
 ## Config
