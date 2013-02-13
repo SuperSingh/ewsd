@@ -48,6 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
+<<<<<<< HEAD
 if (true)
 {
     // Windows via XAMPP
@@ -56,7 +57,7 @@ if (true)
     $db['default']['password'] = '';
     $db['default']['database'] = 'db_ewsd';
 } else {
-// Mac via MAMP-PRO
+    // Mac via MAMP-PRO
     $db['default']['hostname'] = 'localhost';
     $db['default']['username'] = 'root';
     $db['default']['password'] = 'root';

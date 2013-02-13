@@ -12,24 +12,16 @@
     <script type="text/javascript" src="<?php echo base_url() ?>static/js/actions.js"></script>
     
     <link rel="stylesheet" href="<?php echo base_url() ?>static/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="<?php echo base_url() ?>static/bootstrap/css/bootstrap-responsive.min.css"/>
+	<link rel="stylesheet" href="http://bootswatch.com/journal/bootstrap.min.css" />
+	<link rel="stylesheet" href="<?php echo base_url() ?>static/bootstrap/css/bootstrap-responsive.min.css"/>
     <link rel="stylesheet" href="<?php echo base_url() ?>static/imports.css"/>
     <link rel="stylesheet" href="<?php echo base_url() ?>static/sitestyles.css"/>
     
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row-fluid">
         	<div class="span12">
-                <div class="navbar">
-                    <div class="navbar-inner">
-                    <a class="brand" href="<?php echo (base_url()) ?>">GreCMS</a>
-                        <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <?php $this->load->view('layout/navbar'); ?>
             </div>
         </div>
