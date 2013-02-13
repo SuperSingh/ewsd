@@ -48,7 +48,6 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-<<<<<<< HEAD
 if (true)
 {
     // Windows via XAMPP
