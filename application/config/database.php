@@ -47,23 +47,20 @@
 
 $active_group = 'default';
 $active_record = TRUE;
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
 
-if (true)
+if (TRUE)
 {
     // Windows via XAMPP
-    $db['default']['hostname'] = 'localhost';
-    $db['default']['username'] = 'root';
     $db['default']['password'] = '';
-    $db['default']['database'] = 'db_ewsd';
 } else {
     // Mac via MAMP-PRO
-    $db['default']['hostname'] = 'localhost';
-    $db['default']['username'] = 'root';
     $db['default']['password'] = 'root';
-    $db['default']['database'] = 'db_ewsd';
 }
 
 // The rest of the config
+$db['default']['database'] = 'db_ewsd';
 $db['default']['dbdriver'] = 'mysqli'; // GREAT SUCCESS
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

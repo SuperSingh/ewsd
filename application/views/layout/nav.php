@@ -5,16 +5,16 @@
 		    <li>
 				<a href="<?php echo base_url(); ?>">Home</a>
 			</li>
-			<li>
-			    <a href="<?php echo base_url() . 'index.php/main/login'; ?>">Log In</a>
-			</li>
 			<?php
-			if (isset ($courses))
+			if ($this->session->userdata('id')) echo '<li><a href="' . base_url() . 'index.php/main/logout' . '">Log Out</a></li>';
+			else echo '<li><a href="' . base_url() . 'index.php/main/login' . '">Log In</a></li>';
+			?>
+			<?php
+			if ($this->session->userdata('courses'))
 			{
 				echo '<li class="nav-header">Courses</li>';
-				foreach ($courses as $v) {
-		        	echo '<li><a href="'. base_url() .'index.php/course/'.strtolower($v).'">'.strtoupper($v).'</a></li>';
-		        }
+				foreach ($this->session->userdata('courses') as $v)
+		        	echo '<li><a href="'. base_url() .'index.php/course/id/'.strtolower($v).'">'.strtoupper($v).'</a></li>';
 			}
 			?>
 		</ul>
