@@ -8,11 +8,11 @@
     
     <script type="text/javascript" src="<?php echo base_url() ?>static/js/jquery-1.9.0.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>static/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>static/js/jquery.validate.min.js.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>static/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>static/js/actions.js"></script>
     
     <link rel="stylesheet" href="<?php echo base_url() ?>static/bootstrap/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="http://bootswatch.com/journal/bootstrap.min.css" />
+	<!--<link rel="stylesheet" href="http://bootswatch.com/journal/bootstrap.min.css" />-->
 	<link rel="stylesheet" href="<?php echo base_url() ?>static/bootstrap/css/bootstrap-responsive.min.css"/>
     <link rel="stylesheet" href="<?php echo base_url() ?>static/imports.css"/>
     <link rel="stylesheet" href="<?php echo base_url() ?>static/sitestyles.css"/>

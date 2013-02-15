@@ -34,14 +34,13 @@ uploads:
 	 title
 	 comment
 	*file1
-	*file2
-	*file3
 
 ---------------------------------------
 user_course_assoc:
 	+user_id
 	+course_id
 
+(again, possibly not nessasary)
 user_permission_assoc:
 	+user_id
 	+permissons_id

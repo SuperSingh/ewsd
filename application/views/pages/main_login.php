@@ -7,7 +7,7 @@
 				<?php echo validation_errors(); ?>
 			</div>
     		<?php
-    		echo form_open();
+    		echo form_open('main/login', ['id' => 'form_login']); # id = form_login used for the jQuery form validation
 			echo '<p>Username:</p>';
 			echo form_input('username', set_value('username'));
 			echo '<p>Password:</p>';
