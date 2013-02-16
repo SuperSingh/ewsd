@@ -19,7 +19,7 @@
     
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row-fluid">
         	<div class="span12">
                 <?php $this->load->view('layout/navbar'); ?>

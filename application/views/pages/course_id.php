@@ -2,7 +2,7 @@
     <?php $this->load->view('layout/nav') ?>
     <div class="span9 _content">
 		<?php
-		if (count ($errors) > 0)
+		if (isset ($errors))
 		{
 			echo '<ul class="unstyled _errors">';
 			foreach ($errors as $v) {
@@ -11,7 +11,11 @@
 			echo '</ul>';
 		} else {
 			echo '<h1>'.$pagetitle.'</h1>';
-			$this->load->view('layout/kitchensink');
+			echo '<ul>';
+			foreach ($coursedata as $k => $v) {
+				echo '<li>'.$k.': '.$v.'</li>';
+			}
+			echo '</ul>';
 		}
 		?>
     </div>

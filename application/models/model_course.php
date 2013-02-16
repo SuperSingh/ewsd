@@ -9,9 +9,9 @@ class Model_course extends CI_Model
 		# code...
 	}
 	
-	public function getCourse($course_id)
+	public function getCourse($course_code)
 	{
-		$q = $this->db->limit(1)->where('course_id', $course_id)->get('course');
+		$q = $this->db->limit(1)->where('course_code', strtoupper($course_code))->get('course');
 		if ($q->num_rows() > 0)
 		{
 			return $q->row();

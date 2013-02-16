@@ -1,20 +1,39 @@
 <?php
 /**
-* Docstring for Main.php
+* Docstring for user.php
 */
-class Main extends CI_Controller
+class User extends CI_Controller
 {
 	public function index()
 	{
-        $data['pagetitle'] = 'Hello World!';
-        $data['pagecontent'] = 'main_index';
+		redirect(base_url());
+	}
+
+	public function changepassword()
+	{
+		$data['pagetitle'] = 'Change your password';
+		$data['pagecontent'] = 'user_changepassword';
+
+		$this->form_validation->set_rules('currpass', 'Current Password', 'required');
+		$this->form_validation->set_rules('newpassword', 'New Password', 'required|matches[newpassconf]');
+		$this->form_validation->set_rules('newpassconf', 'New Password Conformation', 'required');
+
+		if ($this->form_validation->run())
+		{
+			$this->load->model('model_user');
+			$package = array(
+				'user_pass' => hash('sha256', $this->input->post('newpassword'))
+			);
+			$data['success'] = $this->model_user->updatePassword($this->session->userdata('id'), hash('sha256', $this->input->post('currpass')), $package);
+		}
+
 		$this->load->view('layout/master', $data);
 	}
-	
+
 	public function login()
 	{
 		$data['pagetitle'] = 'Log In';
-		$data['pagecontent'] = 'main_login';
+		$data['pagecontent'] = 'user_login';
 		
 		$this->form_validation->set_rules('username', 'Username', 'required|trim');
 		$this->form_validation->set_rules('password', 'Password', 'required|trim');

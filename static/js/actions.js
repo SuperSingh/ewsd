@@ -8,7 +8,7 @@ $(function() {
 			},
 			password: {
 				required: true
-			}/*,
+			},/*
 			passconf: {
 				required: true,
 				equalTo: "input[name='password']"
@@ -17,6 +17,20 @@ $(function() {
 				required: true,
 				email: true
 			}*/
+		}
+	});
+	$('#form_user_changepassword').validate({
+		rules: {
+			currpass: {
+				required: true
+			},
+			newpassword: {
+				required: true
+			},
+			newpassconf: {
+				required: true,
+				equalTo: "input[name='newpassword']"
+			}
 		}
 	});
 });

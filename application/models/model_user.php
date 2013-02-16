@@ -27,11 +27,23 @@ class Model_user extends CI_Model
 		# code...
 	}
 	
-	public function updateUser($user_id, $data)
+	public function updateUser($user_id, $data) # To be used for admin perposes? Might need to refactor to model_admin.php
 	{
 		# Construct a packet of key/value pairs that need to be updated
-		$this->db->where('user_id', $user_id)->update('user', $data);
-		# code...
+		return $this->db->where('user_id', $user_id)->update('user', $data); # Return's TRUE / FALSE
+	}
+
+	public function updatePassword($user_id, $user_pass, $data)
+	{
+		# Construct a packet of key/value pairs that need to be updated
+		$q = $this->db->where('user_id', $user_id)->where('user_pass', $user_pass)->get('user');
+		if ($q->num_rows > 0)
+		{
+			$this->db->where('user_id', $user_id)->update('user', $data);
+			return TRUE; # User/Pass matched and data has been modified, return true
+		} else {
+			return FALSE; # Failed match, user / pass prob doesn't exist
+		}
 	}
 	
 	public function deleteUser($user_id)
