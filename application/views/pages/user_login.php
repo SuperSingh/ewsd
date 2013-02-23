@@ -7,11 +7,11 @@
 				<?php echo validation_errors(); ?>
 			</div>
     		<?php
-    		echo form_open('user/login', ['id' => 'form_login']); # id = form_login used for the jQuery form validation
-			echo '<p>Username:</p>';
-			echo form_input('username', set_value('username'));
-			echo '<p>Password:</p>';
-			echo form_password('password');
+    		echo form_open('user/login', ['id' => 'form_login', 'class' => 'form-inline']); # id = form_login used for the jQuery form validation
+			echo '<p></p>';
+			echo form_input(['name' => 'username', 'value' => set_value('username'), 'placeholder' => 'Email']);
+			echo '<p></p>';
+			echo form_password(['name' => 'password', 'placeholder' => 'Password']);
 			echo '<p></p>';
 			echo form_submit(['name' => 'submit', 'value' => 'Log In', 'class' => 'btn btn-large btn-primary']);
 			echo form_close();

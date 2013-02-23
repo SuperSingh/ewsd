@@ -17,11 +17,17 @@ class Admin extends CI_Controller
 		$data['pagecontent'] = 'admin_new_user';
 
 		# Set validation rules here e.g.:
-		# $this->form_validation->set_rules('username', 'Username', 'required|trim|max_length=32');
+		# TODO: Check this is correct (DB ERRORS?)
+		$this->form_validation->set_rules('username', 'Username', 'required|trim|max_length=32|is_unique[user.user_name]');
+		$this->form_validation->set_rules('password', 'Password', 'required');
+		$this->form_validation->set_rules('passconf', 'Password Conformation', 'required');
 
-		if ($this->form_validation->run())
+		if ($this->form_validation->run()) # Validation complete, the form was alright!
 		{
-			# Page submitted
+			# Page submitted, do something
+			$data['debug']['username'] = $this->input->post('username');
+			$data['debug']['password'] = $this->input->post('password');
+			$data['debug']['passconf'] = $this->input->post('passconf');
 		}
 
 		$this->load->view('layout/master', $data);

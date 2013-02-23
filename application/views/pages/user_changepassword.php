@@ -15,13 +15,13 @@
         </div>
         <h2>Change your password</h2>
         <?php
-        echo form_open('user/changepassword', ['id' => 'form_user_changepassword']);
-        echo '<p>Current Password:</p>';
-	    echo form_password('currpass');
-	    echo '<p>New Password:</p>';
-	    echo form_password('newpassword');
-	    echo '<p>New Password Conformation:</p>';
-	    echo form_password('newpassconf');
+        echo form_open('user/changepassword', ['id' => 'form_user_changepassword', 'class' => 'form-inline']);
+        echo '<p></p>';
+	    echo form_password(['name' => 'currpass', 'placeholder' => 'Current Password']);
+	    echo '<p></p>';
+	    echo form_password(['name' => 'newpassword', 'placeholder' => 'New Password']);
+	    echo '<p></p>';
+	    echo form_password(['name' => 'newpassconf', 'placeholder' => 'New Password Conformation']);
 	    echo '<p></p>';
 	    echo form_submit(['name' => 'submit', 'value' => 'Change Password', 'class' => 'btn btn-large btn-primary']);
         echo form_close();
