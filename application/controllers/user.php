@@ -76,7 +76,7 @@ class User extends CI_Controller
 	{
 		// Drop session
 		$this->session->sess_destroy();
-		redirect('/');
+		redirect(base_url());
 	}
 }
 ?>
